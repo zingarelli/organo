@@ -4,7 +4,6 @@
 
 Register your employees among the different technology teams of your company.
 
-
 | :placard: Vitrine.Dev |     |
 | -------------  | --- |
 | :sparkles: Nome        | **Organograma de empresa de tecnologia**
@@ -19,7 +18,9 @@ Register your employees among the different technology teams of your company.
 This project was developed in a React course from [Alura](https://www.alura.com.br), called ["React: desenvolvendo com JavaScript"](https://www.alura.com.br/curso-online-react-desenvolvendo-javascript) (React: coding with JavaScript).
 
 Instructors: 
+
 - **[Paulo Silveira](https://www.linkedin.com/in/paulosilveira/)**
+
 - **[Vinicios Neves](https://www.linkedin.com/in/vinny-neves/)**
 
 ## Project Details
@@ -35,6 +36,7 @@ Organo has two main parts. The first one is a form to register a new member: nam
 ![form showing fields to fill in name, role, image and select a team](https://user-images.githubusercontent.com/19349339/212756592-1632b88d-5ae0-4d73-bcee-7e94691f993f.png)
 
 **Gallery of teams and its members (in Portuguese)**
+
 ![gif mostrando os times e respectivos membros](https://user-images.githubusercontent.com/19349339/212757171-6646b737-653f-48f8-9f7c-c7abb941b62e.gif)
 
 When you click in the button "Criar card" (create card), the newly created member is show automatically in the appropriate team gallery. Teams with zero members are not visible - when the first person is added, the corresponding section is then shown. 
@@ -114,6 +116,7 @@ O projeto consiste de duas seções principais. A primeira é formulário para c
 ![formulário de cadastro exibindo os campos de nome, cargo, imagem e time](https://user-images.githubusercontent.com/19349339/212756592-1632b88d-5ae0-4d73-bcee-7e94691f993f.png)
 
 **Galeria de times e membros**
+
 ![gif mostrando os times e respectivos membros](https://user-images.githubusercontent.com/19349339/212757171-6646b737-653f-48f8-9f7c-c7abb941b62e.gif)
 
 Ao clicar no botão "Criar card" do formulário, a pessoa cadastrada  é exibida automaticamente no time que pertence. Não são exibidos os times que não possuem nenhum membro - ao cadastrar a primeira pessoa, a seção é exibida. 
@@ -123,7 +126,9 @@ Ao clicar no botão "Criar card" do formulário, a pessoa cadastrada  é exibida
 Este projeto foi desenvolvido no curso ["React: desenvolvendo com JavaScript"](https://www.alura.com.br/curso-online-react-desenvolvendo-javascript), oferecido pela [Alura](https://www.alura.com.br).
 
 Instrutores: 
+
 - **[Paulo Silveira](https://www.linkedin.com/in/paulosilveira/)**
+
 - **[Vinicios Neves](https://www.linkedin.com/in/vinny-neves/)**
 
 # Desenvolvimento
@@ -137,30 +142,39 @@ As imagens do projeto estão armazenadas na pasta `/public/images`.
 ## Componentes
 
 ### Banner
+
 Consiste apenas de uma imagem que fica no topo da aplicação. O caminho da imagem se encontra hard-coded no componente.
 
 ### TextInput
+
 Componente que possui uma label e um campo de texto. É possível passar via `props` o nome da label, indicação se é um campo obrigatório, o placeholder para o campo de texto, um valor inicial para o campo e uma função para tratar o evento de `onChange`.
 
 ### Dropdown
+
 Componente de select, utilizado no projeto para selecionar o time. A lista de times é passada via `props`, bem como outras opções semelhantes a `TextInput`.
 
 ### Button
+
 Retorna um botão estilizado. O texto do botão é recebido via `props.children`.
 
 ### Form
+
 Este componente agrega os componentes `TextInput`, `Dropdown` e `Button`. Cada um destes campos é controlado utilizando o `useState()`. São recebidos via `props` a lista com os times (repassada para  o componente `DropDown`) e uma função para tratar o evento de `onSubmit`.
 
 ### Member
+
 Card para exibir uma pessoa cadastrada. Os dados da pessoa (nome, cargo, imagem e cor de background) são recebidos via `props`.
 
 ### Team
+
 Possui um cabeçalho e uma div listando os membros de um time (componentes `Member`). O nome do time, a lista de membros e opções para cores primária e secundárias são recebidos via `props`. A lista de membros é percorrida e suas informações são passadas para o componente `Member`.
 
 ### Footer
+
 Rodapé da página, exibindo links para redes sociais, o logo da Organo e um texto. O caminho para o logo e URL dos links, bem como o texto, estão hard-coded.
 
 ### App
+
 Componente principal da aplicação que irá exibir o `Banner`, o `Form`, uma lista de `Team` e o `Footer`. Este componente possui uma variável com a lista de times e uma variável de estado para controlar a lista de membros e renderizar as seções necessárias. Por meio dessas duas variáveis, `App` repassa os dados necessários aos outros componentes.
 
 # Instalação
