@@ -14,7 +14,10 @@ const Form = ({ teams, onRegisteredMember }) => {
     const onSave = (e) => {
         e.preventDefault();
         onRegisteredMember({name, role, image, team});
-        console.log('Form submitted => ', name, role, image, team);
+        setName('');
+        setRole('');
+        setImage('');
+        setTeam('');
     }
     
     return (
