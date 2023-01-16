@@ -1,9 +1,9 @@
 import './Member.css';
 
-const Member = ({ name, role, image }) => {
+const Member = ({ name, role, image, bg }) => {
     return (
         <div className='memberContainer'>
-            <div className='header'>
+            <div className='header' style={{ backgroundColor: bg }}>
                 <img src={image} alt={name} />
             </div>
             <div className='footer'>

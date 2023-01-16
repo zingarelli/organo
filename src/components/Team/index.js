@@ -6,7 +6,15 @@ const Team = ({ name, primaryColor, secondaryColor, members }) => {
         members.length > 0 && <section className='teamContainer' style={{ backgroundColor: secondaryColor }} >
             <h3 style={{ borderColor: primaryColor }}>{name}</h3>
             <div className="memberList">
-                {members.map(member => <Member key={member.name} name={member.name} role={member.role} image={member.image} />)}
+                {members.map(member => (
+                    <Member 
+                        key={member.name} 
+                        name={member.name} 
+                        role={member.role} 
+                        image={member.image} 
+                        bg={primaryColor}
+                    />
+                ))}
             </div>
         </section>
     );
