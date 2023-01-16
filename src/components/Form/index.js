@@ -4,17 +4,8 @@ import Dropdown from '../Dropdown';
 import TextInput from '../TextInput';
 import './Form.css';
 
-const Form = ({ onRegisteredEmployee }) => {
-    const teams = [
-        'Programação', 
-        'Front-End', 
-        'Data Science', 
-        'Devops', 
-        'UX e Design', 
-        'Mobile', 
-        'Inovação e Gestão'
-    ];
-
+const Form = ({ teams, onRegisteredEmployee }) => {
+    
     const [name, setName] = useState('');
     const [role, setRole] = useState('');
     const [image, setImage] = useState('');
