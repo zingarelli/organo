@@ -4,7 +4,7 @@ import Dropdown from '../Dropdown';
 import TextInput from '../TextInput';
 import './Form.css';
 
-const Form = ({ teams, onRegisteredEmployee }) => {
+const Form = ({ teams, onRegisteredMember }) => {
     
     const [name, setName] = useState('');
     const [role, setRole] = useState('');
@@ -13,7 +13,7 @@ const Form = ({ teams, onRegisteredEmployee }) => {
 
     const onSave = (e) => {
         e.preventDefault();
-        onRegisteredEmployee({name, role, image, team});
+        onRegisteredMember({name, role, image, team});
         console.log('Form submitted => ', name, role, image, team);
     }
     
