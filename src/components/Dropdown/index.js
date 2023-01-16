@@ -1,11 +1,12 @@
 import './Dropdown.css';
 
-const Dropdown = ({required, label, itens}) => {
+const Dropdown = ({required, label, itens, option, onChange}) => {
+    
     return (
         <div className='dropdown-container'>
             <label>{label}</label>
-            <select required={required}>
-                {itens.map(item => <option value={item} key={item}>{item}</option>)}
+            <select required={required} value={option} onChange={(e) => onChange(e.target.value)}>
+                {itens.map(item => <option key={item}>{item}</option>)}
             </select>
         </div>
     );
