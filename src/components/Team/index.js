@@ -4,7 +4,8 @@ import './Team.css';
 const Team = ({ name, primaryColor, secondaryColor, members }) => {
     return (
         members.length > 0 && <section className='teamContainer' style={{ backgroundColor: secondaryColor }} >
-            <h3 style={{ borderColor: primaryColor }}>{name}</h3>
+            <h3>{name}</h3>
+            <span style={{ borderColor: primaryColor }} ></span>
             <div className="memberList">
                 {members.map(member => (
                     <Member 

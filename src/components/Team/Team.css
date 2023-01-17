@@ -5,9 +5,13 @@
 
 .teamContainer h3 {
     font-size: 32px;
+    margin-bottom: 0;
+}
+
+.teamContainer span {
+    width: 32px;
     border-bottom: 4px solid;
-    display: inline-block;
-    padding-bottom: 8px;
+    display: inline-block;    
 }
 
 .teamContainer .memberList {
