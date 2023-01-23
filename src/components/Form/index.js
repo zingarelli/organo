@@ -5,12 +5,14 @@ import Dropdown from '../Dropdown';
 import TextInput from '../TextInput';
 import './Form.css';
 
-const Form = ({ teams, onRegisteredMember }) => {
+const Form = ({ teams, onRegisteredMember, onRegisteredTeam }) => {
     
     const [name, setName] = useState('');
     const [role, setRole] = useState('');
     const [image, setImage] = useState('');
     const [team, setTeam] = useState('');
+    const [teamName, setTeamName] = useState('');
+    const [teamColor, setTeamColor] = useState('');
 
     const onSave = (e) => {
         e.preventDefault();
@@ -19,6 +21,13 @@ const Form = ({ teams, onRegisteredMember }) => {
         setRole('');
         setImage('');
         setTeam('');
+    }
+
+    const onSaveTeam = (e) => {
+        e.preventDefault();
+        onRegisteredTeam({ name: teamName, color: teamColor })
+        setTeamName('');
+        setTeamColor('');
     }
     
     return (
@@ -53,6 +62,25 @@ const Form = ({ teams, onRegisteredMember }) => {
                     onChange={ value => setTeam(value)}
                 />
                 <Button>Criar card</Button>
+            </form>
+
+            <form onSubmit={onSaveTeam}>
+                <h2>Preencha os dados para criar um novo time.</h2>
+                <TextInput 
+                    required
+                    label="Nome" 
+                    placeholder="Digite o nome do time" 
+                    text={teamName}
+                    onChange={ value => setTeamName(value)}  
+                />
+                <TextInput 
+                    required
+                    label="Cor" 
+                    placeholder="Digite a cor do time" 
+                    text={teamColor}
+                    onChange={ value => setTeamColor(value)}  
+                />
+                <Button>Criar um novo time</Button>
             </form>
         </section>
     );
