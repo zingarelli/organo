@@ -1,5 +1,12 @@
 .memberContainer {
     width: 280px;
+    position: relative;
+}
+
+.memberContainer .delete {
+    position: absolute;
+    right: -10px;
+    top: -10px;
 }
 
 .memberContainer .header {

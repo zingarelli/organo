@@ -1,6 +1,13 @@
 .teamContainer {
     text-align: center;
     padding: 32px;
+    position: relative;
+}
+
+.teamContainer .input-color {
+    position: absolute;
+    top: 20px;
+    right: 50px;
 }
 
 .teamContainer h3 {
