@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 import { useState } from 'react';
 import Button from '../Button';
 import Dropdown from '../Dropdown';
@@ -13,7 +14,7 @@ const Form = ({ teams, onRegisteredMember }) => {
 
     const onSave = (e) => {
         e.preventDefault();
-        onRegisteredMember({name, role, image, team});
+        onRegisteredMember({id: uuidv4(), name, role, image, team});
         setName('');
         setRole('');
         setImage('');
