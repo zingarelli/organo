@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { useState } from 'react';
 import Button from '../Button';
 import Dropdown from '../Dropdown';
-import TextInput from '../TextInput';
+import InputField from '../InputField';
 import './Form.css';
 
 const Form = ({ teams, onRegisteredMember, onRegisteredTeam }) => {
@@ -34,21 +34,21 @@ const Form = ({ teams, onRegisteredMember, onRegisteredTeam }) => {
         <section className='form-container'>
             <form onSubmit={onSave}>
                 <h2>Preencha os dados para criar o card do colaborador.</h2>
-                <TextInput 
+                <InputField 
                     required={true} 
                     label="Nome" 
                     placeholder="Digite seu nome" 
                     text={name}
                     onChange={ value => setName(value)}  
                 />
-                <TextInput 
+                <InputField 
                     required={true} 
                     label="Cargo" 
                     placeholder="Digite seu cargo" 
                     text={role}
                     onChange={ value => setRole(value)}  
                 />
-                <TextInput 
+                <InputField 
                     label="Imagem" 
                     placeholder="Informe o endereço da imagem" 
                     text={image}
@@ -66,14 +66,14 @@ const Form = ({ teams, onRegisteredMember, onRegisteredTeam }) => {
 
             <form onSubmit={onSaveTeam}>
                 <h2>Preencha os dados para criar um novo time.</h2>
-                <TextInput 
+                <InputField 
                     required
                     label="Nome" 
                     placeholder="Digite o nome do time" 
                     text={teamName}
                     onChange={ value => setTeamName(value)}  
                 />
-                <TextInput 
+                <InputField 
                     required
                     label="Cor" 
                     placeholder="Digite a cor do time" 

@@ -1,8 +1,8 @@
-    import './TextInput.css';
+    import './InputField.css';
 
 // a different coding style to create a function component
 // create a constant, which receives an arrow function, and export this constant
-const TextInput = ({required, label, placeholder, text, onChange}) => {
+const InputField = ({required, label, placeholder, text, onChange}) => {
 
     const onTyped = (e) => {
         onChange(e.target.value);
@@ -16,4 +16,4 @@ const TextInput = ({required, label, placeholder, text, onChange}) => {
     );
 }
 
-export default TextInput;
+export default InputField;
