@@ -75,6 +75,7 @@ const Form = ({ teams, onRegisteredMember, onRegisteredTeam }) => {
                 />
                 <InputField 
                     required
+                    type="color"
                     label="Cor" 
                     placeholder="Digite a cor do time" 
                     text={teamColor}

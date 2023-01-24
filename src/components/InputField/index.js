@@ -1,17 +1,17 @@
-    import './InputField.css';
+import './InputField.css';
 
 // a different coding style to create a function component
 // create a constant, which receives an arrow function, and export this constant
-const InputField = ({required, label, placeholder, text, onChange}) => {
+const InputField = ({ type='text', required=false, label, placeholder, text, onChange }) => {
 
     const onTyped = (e) => {
         onChange(e.target.value);
     }
-    
+
     return (
-        <div className="text-field">
+        <div className={`field-container field-${type}`}>
             <label htmlFor="">{label}</label>
-            <input value={text} type="text" placeholder={placeholder} required={required} onChange={onTyped}/>
+            <input value={text} type={type} placeholder={placeholder} required={required} onChange={onTyped} />
         </div>
     );
 }
