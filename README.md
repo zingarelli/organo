@@ -48,6 +48,7 @@ When you click in the button "Criar card" (create card), the newly created membe
 ![gif show a list of teams and its members](https://user-images.githubusercontent.com/19349339/214321691-c0ff70ce-054f-4322-8718-d5e97f0a8e3c.gif)
 
 **User interactions (change the color of a team, remove and favorite/unfavorite a member)**
+
 ![gif changing the color of a team, removing a team member and favoriting/unfavoriting a team member](https://user-images.githubusercontent.com/19349339/214323754-077dadbc-6fb3-4081-a9bf-3a856739503b.gif)
 
 # Development
@@ -141,6 +142,7 @@ Ao clicar no botão "Criar card" do formulário, a pessoa cadastrada  é exibida
 ![gif mostrando os times e respectivos membros](https://user-images.githubusercontent.com/19349339/214321691-c0ff70ce-054f-4322-8718-d5e97f0a8e3c.gif)
 
 **Interações do usuário (alterar a cor de um time, remover e favoritar/desfavoritar um membro)**
+
 ![gif alterando a cor de um time, removendo um membro e favoritando/desfavoritando um membro](https://user-images.githubusercontent.com/19349339/214323754-077dadbc-6fb3-4081-a9bf-3a856739503b.gif)
 
 ## Créditos
