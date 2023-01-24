@@ -2,7 +2,7 @@ import hexToRgba from 'hex-to-rgba';
 import Member from '../Member';
 import './Team.css';
 
-const Team = ({ team, members, onDelete, onColorChange }) => {
+const Team = ({ team, members, onDelete, onColorChange, onFavorite }) => {
     return (
         members.length > 0 && <section className='teamContainer' style={{ backgroundColor: hexToRgba(team.color, '0.3')}} >
             <input 
@@ -21,6 +21,7 @@ const Team = ({ team, members, onDelete, onColorChange }) => {
                             member={member}
                             bg={team.color}
                             onDelete={onDelete}
+                            onFavorite={onFavorite}
                         />
                     )
                 })}
